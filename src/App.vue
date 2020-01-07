@@ -24,19 +24,19 @@ export default {
   },
   watch:{
     '$route'(to,from){
-      if(to.path =='/'){
-        this.size = {
-          width:'100%',
-          height:'100%'
-        };
-        this.showlayout = true;
-      }else{
+      // if(to.path =='/'){
+      //   this.size = {
+      //     width:'100%',
+      //     height:'100%'
+      //   };
+      //   this.showlayout = true;
+      // }else{
         this.size = {
           width:'calc(100% - 240px)',
           height:'calc(100% - 60px)'
         };
         this.showlayout = true;
-      }
+      // }
     }
   },
   created() {

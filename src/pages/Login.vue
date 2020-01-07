@@ -7,13 +7,7 @@
 
 <template>
   <div class="Login">
-    <div class="Loginform">
-      <div class="logo">
-        <img :src="logo" alt="">
-        <span class="title">TurboConnect</span>
-      </div>
-      {{data}}
-    </div>
+    {{data}}
   </div>
 </template>
 
@@ -46,6 +40,8 @@ export default {
     }
   },
   mounted() {
+window.MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('app')],()=>{});
+
 
     this.data = `
     $\alpha+\beta=\gamma$

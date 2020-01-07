@@ -8,7 +8,7 @@
                 <Col span="24">
                     <Menu ref="menus" :theme="theme2" :active-name="activename" :open-names="opennames">
                         <div v-for="(item,index) in menu" :key="index">
-                            <MenuItem :to="item.to" v-if="item.type=='singlemenu'" class="singlemenu" :name="item.to">
+                            <MenuItem :to="item.to" v-if="item.type=='singlemenu'" class="singlemenu" :name="item.title">
                                 <!-- <Icon type="ios-paper" /> -->
                                 {{item.title}}
                             </MenuItem>
@@ -49,120 +49,29 @@ export default {
         logo:img,
         theme2: 'light',
         activename:'workshop',
-        opennames:[],
+        opennames:['数学分析'],
         breadcrumb:{
             'ftitle':'',
             'stitle':''
         },
         menu:[
             {
-                type:'singlemenu',
-                title:'车间总览',
-                to:'WorkShop'
-            },
-            {
-                type:'singlemenu',
-                title:'设备信息',
-                to:'MachineMsg'
-            },
-            {
                 type:'',
-                title:'产量信息',
+                title:'数学分析',
+                // category:
                 children:[
                     {
-                        title:'产量统计',
-                        to:'YieldsCalc'
-                    },
-                    {
-                        title:'产量详情',
-                        to:'YieldsDetails'
-                    },
-                    {
-                        title:'质量统计',
-                        to:'QualityCalc'
+                        title:'实数集与函数',
+                        to:''
                     }
                 ]
             },
-            {
-                type:'singlemenu',
-                title:'任务分配',
-                to:'TaskAssign'
-            },
-            {
-                type:'singlemenu',
-                title:'产能预估',
-                to:'YieldsPre'
-            },
-            {
-                type:'singlemenu',
-                title:'挡车统计',
-                to:'BlockcarCalc'
-            },
-            {
-                type:'',
-                title:'维修统计',
-                children:[
-                    {
-                        title:'维修统计',
-                        to:'RepairMsg'
-                    },
-                    {
-                        title:'机台警报',
-                        to:'MachineWarning'
-                    }
-                ]
-            },
-            {
-                type:'',
-                title:'针数管理',
-                children:[
-                    {
-                        title:'针数下发',
-                        to:'NeedlePublish'
-                    },
-                    {
-                        title:'用针详情',
-                        to:'NeedleUseDetails'
-                    },
-                    {
-                        title:'用针总览',
-                        to:'NeedleUseOverview'
-                    }
-                ]
-            },
-            {
-                type:'',
-                title:'溯源信息',
-                children:[
-                    {
-                        title:'料箱信息',
-                        to:'WorkbinMsg'
-                    },
-                    {
-                        title:'料箱溯源',
-                        to:'WorkbinSource'
-                    }
-                ]
-            },
-            {
-                type:'',
-                title:'工艺管理',
-                children:[
-                    {
-                        title:'工艺参数',
-                        to:'TechniqueParam'
-                    },
-                    {
-                        title:'花型管理',
-                        to:'FlowertypeManage'
-                    }
-                ]
-            },
-            {
-                type:'singlemenu',
-                title:'人员管理',
-                to:'PersonManage'
-            }
+            // {
+            //     type:'singlemenu',
+            //     title:'任务分配',
+            //     to:'TaskAssign'
+            // },
+            
         ]
 
     }

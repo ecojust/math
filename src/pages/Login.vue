@@ -12,21 +12,7 @@
         <img :src="logo" alt="">
         <span class="title">TurboConnect</span>
       </div>
-      <Form ref="formInline" :model="formInline" :rules="ruleInline">
-        <FormItem prop="user">
-            <Input type="text" v-model="formInline.user" placeholder="用户名">
-                <Icon type="ios-person-outline" slot="prepend"></Icon>
-            </Input>
-        </FormItem>
-        <FormItem prop="password">
-            <Input type="password" v-model="formInline.password" placeholder="密码">
-                <Icon type="ios-lock-outline" slot="prepend"></Icon>
-            </Input>
-        </FormItem>
-        <FormItem>
-            <Button size="large" type="primary" @click="handleSubmit('formInline')">Signin</Button>
-        </FormItem>
-    </Form>
+      {{data}}
     </div>
   </div>
 </template>
@@ -42,6 +28,7 @@ export default {
   name: 'login',
   data() {
     return {
+      data:"",
       logo:img,
       formInline: {
           user: 'ZS001',
@@ -58,7 +45,16 @@ export default {
       }
     }
   },
-  mounted() {},
+  mounted() {
+
+    this.data = `
+    $\alpha+\beta=\gamma$
+
+$$\alpha+\beta=\gamma$$
+
+$$\int_{0}^{1}f(x)dx \sum_{1}^{2}\int_{0}^{1}f(x)dx \sum_{1}^{2}\int_{0}^{1}f(x)dx \sum_{1}^{2}\int_{0}^{1}f(x)dx \sum_{1}^{2}\int_{0}^{1}f(x)dx \sum_{1}^{2}\int_{0}^{1}f(x)dx \sum_{1}^{2}\int_{0}^{1}f(x)dx \sum_{1}^{2}\int_{0}^{1}f(x)dx \sum_{1}^{2}\int_{0}^{1}f(x)dx \sum_{1}^{2}\int_{0}^{1}f(x)dx \sum_{1}^{2}$$
+    `
+  },
   computed: {
     id() {
       return this.$store.state.id
@@ -66,11 +62,7 @@ export default {
 
   },
   created(){
-    window.addEventListener('keydown',e=>{
-        if(e.keyCode==13){
-         this.handleSubmit('formInline')
-        }
-    })
+    
   },
   methods: {
     handleSubmit(name) {

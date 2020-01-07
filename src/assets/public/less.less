@@ -1,0 +1,112 @@
+//高亮蓝色
+@blue: #2a4e65;
+@lightblue:#156597;
+//默认白色底色
+@white: #ffffff;
+//灰色
+@gray:rgba(192, 192, 192,0.2);
+//白色+透明度
+@wtrgb : rgba(255, 255, 255, 0.5);
+@wtrgb6: rgba(255, 255, 255, 0.6);
+@wtrgb7: rgba(255, 255, 255, 0.7);
+@wtrgb8: rgba(255, 255, 255, 0.8);
+@wtrgb9: rgba(255, 255, 255, 0.9);
+//圆环颜色
+@circlecolor: #323a45;
+@greencolor: #2bbd9e;
+//css3动画类
+.transition_all_half {
+  transition     : all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+}
+
+.transition_all_one {
+  transition     : all 1s;
+  -moz-transition: all 1s;
+  /* Firefox 4 */
+  -webkit-transition: all 1s;
+  /* Safari 和 Chrome */
+  -o-transition: all 1s;
+  /* Opera */
+}
+
+
+
+
+.gm-scrollbar.-vertical {
+  background-color: rgba(255, 255, 255, 0.5)
+}
+
+/* horizontal scrollbar track */
+.gm-scrollbar.-horizontal {
+  background-color: transparent;
+}
+
+/* scrollbar thumb */
+.gm-scrollbar .thumb {
+  background-color: #bfbfbf;
+  opacity         : 0.4;
+}
+
+.gm-scrollbar .thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.sidebar{
+  .ivu-row{
+    margin-bottom:20px;
+    .key{
+      font-weight:700;
+      font-size:16px;
+    }
+    .value{
+      font-size:16px;
+    }
+  }
+  
+}
+
+.ivu-btn-primary{
+  border-color:@blue !important;
+  background-color: @blue !important;
+}
+.inputsearch{
+  .ivu-input-icon{
+    background: @blue !important;
+  }
+}
+
+.vertical-center-modal{
+  .key,.value{
+    display:inline-block;
+    margin-bottom:10px;
+  }
+  .key{
+    width:140px;
+    text-align:right;
+    font-weight:900;
+    margin-right:10px;
+    height:30px;
+    line-height: 30px;
+  }
+  .warning{
+    display:inline-block;
+    font-size:12px;
+    color:red;
+  }
+}
+
+.table{
+  .page{
+    width:100%;
+    text-align:center;
+    position:absolute;
+    bottom:15px;
+  }
+}

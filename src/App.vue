@@ -1,3 +1,9 @@
+<!--
+ * @Author: 桔子桑
+ * @Date: 2019-11-09 02:58:56
+ * @FilePath: /math/src/App.vue
+ * @Description: 文件描述
+-->
 <template>
   <div id="app">
     <Layout v-show="showlayout"></Layout>
@@ -66,13 +72,32 @@ export default {
 
   #maincontent,.maincontent {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding:20px;
     right:0;
     bottom:0;
     background-color: transparent;
     // border:1px solid;
     // background: gainsboro;
+    h1,h2,h3,h4,h5,h6{
+      text-align:left !important;
+      >span{
+      text-align:left !important;
+      text-indent:15px
+      }
+    }
+    
+    h5,h4,h3{
+      color:red;
+      text-indent:15px
+    }
+    p{
+      text-indent:25px;
+      text-align:left;
+
+
+    }
   }
 }
 /* MathJax v2.7.5 from 'cdnjs.cloudflare.com' */

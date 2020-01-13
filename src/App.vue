@@ -88,9 +88,11 @@ export default {
       }
     }
     
-    h5,h4,h3{
+    h5,h4{
       color:red;
-      text-indent:15px
+      text-indent:15px;
+      padding:10px 0;
+      
     }
     p{
       text-indent:25px;

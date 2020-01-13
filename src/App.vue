@@ -96,9 +96,7 @@ export default {
     }
     p{
       text-indent:25px;
-      text-align:left;
-
-
+      text-align:left !important;
     }
   }
 }

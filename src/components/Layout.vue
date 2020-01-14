@@ -62,7 +62,11 @@ export default {
                 children:[
                     {
                         title:'实数集与函数',
-                        to:''
+                        to:'Chapter1'
+                    },
+                    {
+                        title:'数列极限',
+                        to:'Chapter2'
                     }
                 ]
             },

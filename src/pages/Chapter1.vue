@@ -6,7 +6,7 @@
 -->
 
 <template>
-  <div class="Login">
+  <div class="Chapter1">
     <GeminiScrollbar >
     <h3>实数</h3>
     <h4>表示</h4>
@@ -51,6 +51,35 @@
       <p>函数f有反函数，意味着f是D与M之间的一个一一映射，我们称：</p>
       $$f^{-1} 为映射f的逆映射$$
       $$y = f^{-1}(x),x \in f(D)$$
+    <h4>有界函数</h4>
+      <p>设f为定义在D上的函数，若存在数M/L，使得对于D内的每一个x，恒有：</p>
+      $$f(x) \leq M \; (f(x) \geq L)$$
+      <p>则称f为D上的有上(下)界函数，M(L)称为f在D上的一个上(下)界</p>
+    <h4>单调函数</h4>
+      <p>设f为定义在D上的函数，若：</p>
+      $$对于x_1,x_2 \in D,当x_1 < x_2 时，总有$$
+      $$f(x_1) \leq f(x_2)$$
+      <p>则称f为D上的增函数，特别当：</p>
+      $$f(x_1) < f(x_2)成立时$$
+      <p>则称f为D上的严格增函数</p>
+      <p>相反的，若：</p>
+      $$对于x_1,x_2 \in D,当x_1 < x_2 时，总有$$
+      $$f(x_1) \geq f(x_2)$$
+      <p>则称f为D上的减函数，特别当：</p>
+      $$f(x_1) > f(x_2)成立时$$
+      <p>则称f为D上的严格减函数</p>
+      <p>我的记忆规则：<b>同增异减</b></p>
+    <h4>奇函数和偶函数</h4>
+      <p>设D为对称于原点的数集，f为定义在D上的函数：</p>
+      $$对于每一个x \in D有：f(-x) = - f(x) \; 或者 \; f(-x) = f(x)$$
+      <p>则称f为D上的奇(偶)函数</p>
+    <h4>周期函数</h4>
+      <p>设f为定义在数集D上的函数，若存在σ > 0，使得</p>
+      $$对于每一个x \in D有：f(x  \pm \sigma) = f(x)$$
+      <p>则称f为周期函数，σ称为f的一个周期，若σ为最小周期，则称σ为f的基本周期，或简称周期</p>
+
+
+      
 
 
     
@@ -66,7 +95,7 @@
 import Bus from '../utils/bus'
 
 export default {
-  name: 'login',
+  name: 'Chapter1',
   data() {
     return {
       data:"",
@@ -94,7 +123,7 @@ window.MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('app')
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
 @import '../assets/public/less.less';
-.Login{
+.Chapter1{
   position: relative;
 
 }

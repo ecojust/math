@@ -12,6 +12,11 @@ Vue.use(Router)
 
 
 var routes = [
+  {
+    path: '/',
+    name: 'Chapter1',
+    component: () => import("@/pages/Chapter1")
+  },
     {
       path: '/Chapter1',
       name: 'Chapter1',
@@ -21,6 +26,11 @@ var routes = [
       path: '/Chapter2',
       name: 'Chapter2',
       component: () => import("@/pages/Chapter2")
+    },
+    {
+      path: '/Chapter3',
+      name: 'Chapter3',
+      component: () => import("@/pages/Chapter3")
     },
   ]
 

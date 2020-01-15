@@ -67,6 +67,10 @@ export default {
                     {
                         title:'数列极限',
                         to:'Chapter2'
+                    },
+                    {
+                        title:'函数极限',
+                        to:'Chapter3'
                     }
                 ]
             },

@@ -97,6 +97,19 @@ export default {
     p{
       text-indent:25px;
       text-align:left !important;
+      position: relative;
+      >span{
+      text-indent:80px;
+      text-align:left !important;
+
+      }
+    }
+    .eg:before{
+      content:'e.g.';
+      display:inline-block;
+      position:absolute;
+      font-weight:700;
+      top:5px;
     }
   }
 }

@@ -6,15 +6,19 @@
 -->
 
 <template>
-  <div class="Chapter2">
+  <div class="Chapter3">
     <GeminiScrollbar >
-    <h3>数列极限</h3>
+    <h3>函数极限</h3>
     <h4>概念</h4>
-      <p>一般地说：</p>
-      $$对于数列\lbrace a_n \rbrace,当n无限增大时a_n能无限地接近一个常数a$$
-      $$则称此数列为收敛数列,否则称为发散数列;常数a称为它的极限,也称数列\lbrace a_n \rbrace收敛于a,记作$$
-      $$\lim_{n \to +\infty} a_n = a \; 或 \; a_n \to a (a \to \infty)$$
-      $$读作“当n趋于无穷大时,a_n的极限等于a \; 或 \;a_n 趋于 a”$$
+      <p>函数f当x趋于正无穷时以A为极限，记作：</p>
+      $$\lim_{x \to +\infty} f(x) = A \; 或 \; f(x) \to A (x \to \infty)$$
+    <h4>迫敛性(夹逼准则)</h4>
+      $$设\lim_{x \to x_0} f(x)  = \lim_{x \to x_0} g(x) = A,且在某U^\circ(x_0;{\sigma}^\prime)内有：$$
+      $$f(x) \leq h(x) \leq g(x) ，$$
+      $$则\lim_{x \to x_0} h(x) = A$$
+      <p class="eg">$$求\lim_{x \to 0} x \left[ \frac1x \right]$$</p>
+      $$解:当x>0时有：$$
+      $$1-x <  x\left[ \frac1x \right] \leq 1,$$
 
 
       
@@ -33,7 +37,7 @@
 import Bus from '../utils/bus'
 
 export default {
-  name: 'Chapter2',
+  name: 'Chapter3',
   data() {
     return {
       data:"",
@@ -77,10 +81,7 @@ window.MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('app')
           map.get(item.id).push(item);
         }
       })
-      // console.log(map);
-      for(var [k,v] of map){
-        console.log(k,v)
-      }
+      console.log(map);
     }
   }
 }
@@ -89,7 +90,7 @@ window.MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('app')
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
 @import '../assets/public/less.less';
-.Chapter2{
+.Chapter3{
   position: relative;
 
 }

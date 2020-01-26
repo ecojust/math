@@ -1,3 +1,11 @@
+/*********************
+ *
+ * @Author: 桔子桑
+ * @Date: 2020-01-26 22:26:00
+ * @FilePath: /math/src/router/index.js
+ * @Description: 文件描述
+ *
+*********************/
 /* ============================================================================= 
 #
 # Author: 桔子桑
@@ -39,22 +47,22 @@ var router = new Router({
   routes: routes
 });
 
-router.beforeEach((to, from, next) => {
-  if(to.path!='/'){
-    if (localStorage.getItem('userinfo')) { // 判断缓存里面是否有 userName  //在登录的时候设置它的值
-        next();
-    } else {
-        next({
-            path: '/',
-            query: {
-                redirect: to.fullPath.substr(1)
-            }
-        })
-    }
-  }else{
-    next();
-  }
-});
+// router.beforeEach((to, from, next) => {
+//   if(to.path!='/'){
+//     if (localStorage.getItem('userinfo')) { // 判断缓存里面是否有 userName  //在登录的时候设置它的值
+//         next();
+//     } else {
+//         next({
+//             path: '/',
+//             query: {
+//                 redirect: to.fullPath.substr(1)
+//             }
+//         })
+//     }
+//   }else{
+//     next();
+//   }
+// });
 
 
 
